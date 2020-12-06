@@ -96,14 +96,15 @@ while True:
                 cursor.execute("SHOW TABLES")
 
 
-                if (test_name ,) in cursor.fetchall():
+                if (test_name ,) not in cursor.fetchall():
                     print("This test does not exist or is invalid. Please enter the correct test name.")
                     break
                 
                 cursor.execute("USE students")
                 cursor.execute("SHOW TABLES")
-                
-                for student in cursor.fetchall():
+                tables = cursor.fetchall()
+
+                for student in tables:
             
                     student_name = student[0][0].split(" | ")
 
@@ -187,8 +188,10 @@ while True:
             all_tables = cursor.fetchall()            
 
             for user in all_tables:
+
             #getting total score for one student and displaying it
                 #initializing da ting
+
                 cursor.execute(f"SELECT subj_score FROM {(user ,)[0]} WHERE test_name = {test_name}")
                 scores = dict(cursor.fetchall()[0])
 
