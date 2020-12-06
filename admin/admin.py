@@ -168,7 +168,7 @@ while True:
 
     elif choice == 5:
 
-
+        
         while True:
 
             test_name = input("Enter test name for which results are to be viewed: ")
@@ -197,7 +197,7 @@ while True:
 
                 total_score = get_total_score(scores)
                 
-                student_username = user[0][0].split(" | ")[0]
+                student_username = user[0].split(" | ")[0]
 
                 #displaying da ting
                 print(f"Subjective score for {student_username} : {total_score}\n")
