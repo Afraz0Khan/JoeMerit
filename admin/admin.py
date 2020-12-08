@@ -106,7 +106,7 @@ while True:
 
                 for student in tables:
             
-                    student_name = student[0][0].split(" | ")
+                    student_name = student[0].split(" | ")[0]
 
 
 
