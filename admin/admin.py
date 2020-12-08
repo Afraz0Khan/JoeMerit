@@ -86,6 +86,7 @@ while True:
         else:
             delete_test(test_name)
 
+
     elif choice == 4:
         while True:
 
@@ -107,10 +108,10 @@ while True:
                 for student in tables:
             
                     student_name = student[0].split(" | ")[0]
-
-
-
                     print(f"Grading test for {student_name}.")
+
+
+                    
                     cursor.execute(f"SELECT * FROM {student} WHERE test_name = {str(test_name)}")
                     horizontal = cursor.fetchone()
                     all_answers = horizontal[0][1]
