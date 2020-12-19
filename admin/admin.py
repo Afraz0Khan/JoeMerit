@@ -114,7 +114,7 @@ while True:
                     
                     cursor.execute(f"SELECT * FROM {student} WHERE test_name = {str(test_name)}")
                     horizontal = cursor.fetchone()
-                    all_answers = horizontal[0][1]
+                    all_answers = horizontal[1]
 
             
                     #question extraction
