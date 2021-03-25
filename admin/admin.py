@@ -3,9 +3,9 @@ from datetime import datetime
 
 import MySQLdb
 
-from options_admin import *
-from helpers_admin import *
-from sql_functions_admin import *
+from admin.options_admin import *
+from admin.helpers_admin import *
+from admin.sql_functions_admin import *
 
 db = MySQLdb.connect(host = "localhost", user = "root", passwd = os.environ['sqlpwd'])
 cursor = db.cursor()
