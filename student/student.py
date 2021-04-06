@@ -176,9 +176,14 @@ while True:
                         if get_table_name(login_id, login_pw) == table_name:
                             print("Logged in successfully")
                             logged_in = True  
+                            break
                     else:
                         print("The entered credentials may be wrong or you might not have an account.")
                         logged_in = False
+
+                else:
+                    break
+                        
                 
             
             if logged_in:
