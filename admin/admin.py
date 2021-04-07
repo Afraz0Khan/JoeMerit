@@ -70,7 +70,9 @@ while True:
                 remove_question(test_name, question_number)
 
             elif subchoice == 5:
-                modify_question()
+                testName = input('Enter name of test whose properties are to be modified: ')
+                ques_no = input('Enter question number to be edited: ')
+                modify_question(testName, ques_no)
 
             elif subchoice == 6:
                 break
